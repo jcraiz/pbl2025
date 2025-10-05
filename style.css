@@ -112,7 +112,7 @@ ul ul, ol ul, ul ol, ol ol {
     padding-left: 15px;
 }
 
-/* Custom indicator for summary */
+/* Custom indicator for main chapter summary */
 .chapter-level > summary::before {
     content: '▶ ';
     display: inline-block;
@@ -124,14 +124,15 @@ ul ul, ol ul, ul ol, ol ol {
     transform: rotate(90deg);
 }
 
+/* Custom indicator removed for nested sections as icons are in HTML */
 .chapter-level details summary::before {
-    content: '+ ';
-    margin-right: 5px;
+    content: '';
+    margin-right: 0px;
     font-size: 0.9em;
     transition: transform 0.2s;
 }
 
 .chapter-level details[open] summary::before {
-    content: '- ';
+    content: '';
     transform: rotate(0deg);
 }
