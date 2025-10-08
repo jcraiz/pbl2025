@@ -1,29 +1,44 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const expandAllButton = document.getElementById('expandAll');
-    const collapseAllButton = document.getElementById('collapseAll');
-    
-    // Select all details elements. Use a class selector if you only want to target main chapters.
-    // Here, we select ALL details elements to open/close the whole structure.
+    const toggleAllButton = document.getElementById('toggleAll');
     const allDetails = document.querySelectorAll('details');
 
-    /**
-     * Toggles the 'open' attribute on all details elements.
-     * @param {boolean} shouldOpen - true to expand, false to collapse.
-     */
-    const toggleDetails = (shouldOpen) => {
-        allDetails.forEach(detail => {
-            detail.open = shouldOpen;
-        });
-    };
+    // A state variable to track whether all sections are currently expanded
+    let areAllExpanded = false;
 
-    expandAllButton.addEventListener('click', () => {
-        toggleDetails(true);
+    // Set initial state based on what's open on load. Let's default to collapsed.
+    // First, collapse all except the very first chapter for a clean start.
+    allDetails.forEach((detail, index) => {
+        // The first main chapter is open by default in the HTML, so we respect that.
+        if (!detail.open) {
+            areAllExpanded = false;
+        }
     });
+    // If the first one being open is the ONLY one open, we are not "fully expanded"
+    // A simple check is to see if more than one is open.
+    const openDetails = document.querySelectorAll('details[open]').length;
+    if (openDetails === allDetails.length) {
+        areAllExpanded = true;
+        toggleAllButton.textContent = '➖ Collapse All';
+    } else {
+        areAllExpanded = false;
+        toggleAllButton.textContent = '➕ Expand All';
+    }
 
-    collapseAllButton.addEventListener('click', () => {
-        // Collapse only the main chapter level for a cleaner default state,
-        // or toggleDetails(false) to collapse everything, including nested sections.
-        // Let's collapse everything for simplicity of "Collapse All"
-        toggleDetails(false);
+
+    toggleAllButton.addEventListener('click', () => {
+        // Flip the state: if they were expanded, we want to collapse them, and vice versa.
+        areAllExpanded = !areAllExpanded;
+
+        // Apply the new state to all details elements
+        allDetails.forEach(detail => {
+            detail.open = areAllExpanded;
+        });
+
+        // Update the button text to reflect the new state
+        if (areAllExpanded) {
+            toggleAllButton.textContent = '➖ Collapse All';
+        } else {
+            toggleAllButton.textContent = '➕ Expand All';
+        }
     });
 });
