@@ -4,145 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project-Based Learning Handbook Summary</title>
-    <style>
-        :root {
-            --color-chapter: #004c99;
-            --color-section: #007bff;
-            --color-background: #f8f9fa;
-            --color-text: #343a40;
-            --color-border: #dee2e6;
-            --padding-base: 15px;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: var(--color-text);
-            background-color: #fff;
-            padding: 20px;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            background-color: #fff;
-            padding: 0;
-        }
-
-        h1 {
-            text-align: center;
-            color: var(--color-chapter);
-            margin-bottom: 30px;
-        }
-
-        .controls {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .controls button {
-            padding: 10px 15px;
-            margin: 5px;
-            background-color: var(--color-section);
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.2s;
-        }
-
-        .controls button:hover {
-            background-color: var(--color-chapter);
-        }
-
-        .chapter-level {
-            margin-bottom: 20px;
-            border: 1px solid var(--color-border);
-            border-radius: 5px;
-        }
-
-        .chapter-level > summary {
-            background-color: var(--color-chapter);
-            color: white;
-            padding: var(--padding-base);
-            cursor: pointer;
-            font-size: 1.2em;
-            list-style: none;
-            border-radius: 5px;
-        }
-
-        .chapter-level > summary:hover {
-            background-color: #003366;
-        }
-
-        .chapter-level details {
-            margin-top: 10px;
-            border-left: 3px solid var(--color-section);
-            margin-left: 10px;
-        }
-
-        .chapter-level details summary {
-            background-color: var(--color-background);
-            color: var(--color-section);
-            padding: 10px var(--padding-base);
-            cursor: pointer;
-            font-size: 1em;
-            font-weight: bold;
-            list-style: none;
-            border-radius: 3px;
-            transition: background-color 0.2s;
-        }
-
-        .chapter-level details summary:hover {
-            background-color: #e2e6ea;
-        }
-
-        .content-body {
-            padding: var(--padding-base);
-            padding-top: 5px;
-        }
-
-        p, ul, ol {
-            margin: 10px 0;
-            padding-left: 20px;
-        }
-
-        ul ul, ol ul, ul ol, ol ol {
-            margin-top: 5px;
-            padding-left: 15px;
-        }
-
-        .chapter-level > summary::before {
-            content: '▶ ';
-            display: inline-block;
-            transition: transform 0.2s;
-        }
-
-        .chapter-level[open] > summary::before {
-            content: '▼ ';
-            transform: rotate(90deg);
-        }
-
-        .chapter-level details summary::before {
-            content: '';
-            margin-right: 0px;
-            font-size: 0.9em;
-            transition: transform 0.2s;
-        }
-
-        .chapter-level details[open] summary::before {
-            content: '';
-            transform: rotate(0deg);
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <h1>Project-Based Learning: A Project Management Approach</h1>
 
         <div class="controls">
-            <button id="expandAll">➕ Expand All Chapters</button>
-            <button id="collapseAll">➖ Collapse All Chapters</button>
+            <!-- UI Improvement: Replaced two buttons with a single toggle button -->
+            <button id="toggleAll">➕ Expand All</button>
         </div>
 
         <details open class="chapter-level">
@@ -210,7 +80,7 @@
                 <p>This chapter focuses on the motivation behind a project and the critical early stages of project initiation and definition.</p>
 
                 <details>
-                    <summary>💤 <b>Project Initiation & Locus of Control</b></summary>
+                    <summary>👤 <b>Project Initiation & Locus of Control</b></summary>
                     <div class="content-body">
                         <p>A project can be initiated by the <strong>instructor</strong>, <strong>students</strong>, or an <strong>external sponsor</strong>. The locus of control is often related to who initiates the project:</p>
                         <ul>
@@ -355,41 +225,42 @@
                 </ul>
             </div>
         </details>
-
+        
+        <!-- NEW SECTION: ANNEX -->
         <details class="chapter-level">
-            <summary>📘 <b>ANNEX: POSSIBLE DELIVERABLES IN PBL</b></summary>
+            <summary>📎 <b>ANNEX: POSSIBLE DELIVERABLES IN PBL</b></summary>
             <div class="content-body">
-                <p>This annex provides a comprehensive categorization of potential deliverables for project-based learning. These deliverables can serve as final products or interim outputs throughout the project lifecycle.</p>
+                <p>This section provides a categorized list of potential deliverables that can be produced in a Project-Based Learning context.</p>
 
                 <details>
-                    <summary>📝 <b>Written & Print Media</b></summary>
+                    <summary>✍️ <b>Written & Print Media</b></summary>
                     <div class="content-body">
                         <ul>
                             <li>Advertisement</li>
-                            <li>Biography/Memoir</li>
-                            <li>Book compilation</li>
                             <li>Brochure</li>
-                            <li>Case study</li>
                             <li>Children's book</li>
                             <li>Cookbook</li>
                             <li>Essay</li>
-                            <li>Field guide</li>
-                            <li>Graphic novel</li>
-                            <li>Instruction manual</li>
-                            <li>Magazine article</li>
                             <li>Newspaper editorial</li>
                             <li>Pamphlet</li>
-                            <li>Poetry collection</li>
-                            <li>Press release</li>
                             <li>Recipe</li>
                             <li>Report</li>
-                            <li>Research journal</li>
                             <li>Review</li>
                             <li>Scientific paper</li>
-                            <li>Screenplay/Script</li>
+                            <li>Screenplay/script</li>
+                            <li>Book compilation</li>
+                            <li>Graphic novel</li>
+                            <li>Magazine article</li>
+                            <li>Research journal</li>
+                            <li>Field guide</li>
+                            <li>Instruction manual</li>
+                            <li>Poetry collection</li>
                             <li>Travel guide</li>
+                            <li>Biography/memoir</li>
+                            <li>Case study</li>
                             <li>White paper</li>
                             <li>Zine</li>
+                            <li>Press release</li>
                         </ul>
                     </div>
                 </details>
@@ -398,26 +269,26 @@
                     <summary>🎨 <b>Visual Arts & Design</b></summary>
                     <div class="content-body">
                         <ul>
-                            <li>Architectural model</li>
                             <li>Artwork</li>
                             <li>Blueprint</li>
-                            <li>Collage</li>
-                            <li>Comic strip/Graphic novel</li>
-                            <li>Data visualization</li>
-                            <li>Fashion collection</li>
-                            <li>Infographic</li>
-                            <li>Installation art</li>
-                            <li>Logo design</li>
                             <li>Map</li>
                             <li>Mural</li>
                             <li>Photo essay</li>
-                            <li>Photography portfolio</li>
                             <li>Poster</li>
                             <li>Product design</li>
                             <li>Schematic</li>
-                            <li>Sculpture</li>
                             <li>Street artwork</li>
                             <li>Timeline</li>
+                            <li>Infographic</li>
+                            <li>Logo design</li>
+                            <li>Fashion collection</li>
+                            <li>Sculpture</li>
+                            <li>Collage</li>
+                            <li>Architectural model</li>
+                            <li>Comic strip/graphic novel</li>
+                            <li>Data visualization</li>
+                            <li>Installation art</li>
+                            <li>Photography portfolio</li>
                         </ul>
                     </div>
                 </details>
@@ -426,29 +297,29 @@
                     <summary>💻 <b>Digital & Interactive Media</b></summary>
                     <div class="content-body">
                         <ul>
-                            <li>Animation</li>
-                            <li>Augmented reality application</li>
-                            <li>Blog</li>
-                            <li>Chatbot</li>
                             <li>Database</li>
-                            <li>Digital magazine</li>
-                            <li>Digital portfolio</li>
-                            <li>E-learning module</li>
-                            <li>Interactive map</li>
-                            <li>Interactive timeline</li>
                             <li>Mobile app</li>
-                            <li>Online tutorial series</li>
                             <li>Podcast</li>
                             <li>Simulation</li>
                             <li>Slideshow</li>
-                            <li>Social media campaign</li>
                             <li>Software application</li>
                             <li>Video game</li>
                             <li>Video production</li>
-                            <li>Virtual reality experience</li>
                             <li>Website</li>
                             <li>Wiki</li>
+                            <li>Virtual reality experience</li>
+                            <li>Augmented reality application</li>
+                            <li>Interactive timeline</li>
+                            <li>Digital portfolio</li>
+                            <li>E-learning module</li>
+                            <li>Animation</li>
+                            <li>Social media campaign</li>
+                            <li>Blog</li>
                             <li>YouTube channel</li>
+                            <li>Digital magazine</li>
+                            <li>Interactive map</li>
+                            <li>Online tutorial series</li>
+                            <li>Chatbot</li>
                         </ul>
                     </div>
                 </details>
@@ -458,24 +329,24 @@
                     <div class="content-body">
                         <ul>
                             <li>Conference presentation</li>
-                            <li>Dance performance</li>
                             <li>Debate</li>
-                            <li>Demonstration</li>
-                            <li>Gallery walk</li>
+                            <li>Newscast</li>
+                            <li>Panel presentation</li>
+                            <li>Public address</li>
+                            <li>Theatrical production</li>
                             <li>Musical composition</li>
                             <li>Musical performance</li>
-                            <li>Newscast</li>
-                            <li>Oral history presentation</li>
-                            <li>Panel presentation</li>
-                            <li>Pitch presentation</li>
+                            <li>TED-style talk</li>
                             <li>Poetry slam</li>
-                            <li>Public address</li>
+                            <li>Dance performance</li>
+                            <li>Oral history presentation</li>
+                            <li>Demonstration</li>
+                            <li>Pitch presentation</li>
+                            <li>Gallery walk</li>
+                            <li>Symposium</li>
+                            <li>Workshop facilitation</li>
                             <li>Stand-up comedy routine</li>
                             <li>Storytelling performance</li>
-                            <li>Symposium</li>
-                            <li>TED-style talk</li>
-                            <li>Theatrical production</li>
-                            <li>Workshop facilitation</li>
                         </ul>
                     </div>
                 </details>
@@ -484,48 +355,48 @@
                     <summary>🤝 <b>Community & Civic Engagement</b></summary>
                     <div class="content-body">
                         <ul>
-                            <li>Advocacy campaign</li>
                             <li>Bid</li>
                             <li>Business plan</li>
                             <li>City plan</li>
-                            <li>Community needs assessment</li>
-                            <li>Community survey and report</li>
-                            <li>Community workshop series</li>
                             <li>Delegation</li>
-                            <li>Fundraising campaign</li>
-                            <li>Mentorship program</li>
-                            <li>Neighborhood improvement plan</li>
                             <li>Petition</li>
                             <li>Proposal for further action</li>
-                            <li>Public forum/Town hall</li>
-                            <li>Public policy recommendation</li>
                             <li>Public service announcement</li>
                             <li>School garden</li>
-                            <li>Social enterprise</li>
+                            <li>Community needs assessment</li>
+                            <li>Fundraising campaign</li>
                             <li>Volunteer program</li>
+                            <li>Mentorship program</li>
+                            <li>Community workshop series</li>
+                            <li>Neighborhood improvement plan</li>
+                            <li>Public policy recommendation</li>
+                            <li>Social enterprise</li>
+                            <li>Advocacy campaign</li>
+                            <li>Community survey and report</li>
+                            <li>Public forum/town hall</li>
                         </ul>
                     </div>
                 </details>
 
                 <details>
-                    <summary>🔧 <b>Physical Products & Prototypes</b></summary>
+                    <summary>🛠️ <b>Physical Products & Prototypes</b></summary>
                     <div class="content-body">
                         <ul>
-                            <li>3D printed object</li>
-                            <li>Board game/Card game</li>
-                            <li>Clothing line</li>
-                            <li>Consumer product</li>
-                            <li>Engineering solution</li>
-                            <li>Food product</li>
-                            <li>Furniture design</li>
-                            <li>Invention</li>
-                            <li>Medical device</li>
-                            <li>Product design</li>
                             <li>Prototype</li>
                             <li>Robotics competition entry</li>
-                            <li>Sustainable packaging design</li>
                             <li>Technological innovation</li>
+                            <li>Product design</li>
+                            <li>Invention</li>
+                            <li>Engineering solution</li>
+                            <li>3D printed object</li>
+                            <li>Consumer product</li>
+                            <li>Medical device</li>
+                            <li>Sustainable packaging design</li>
+                            <li>Furniture design</li>
                             <li>Tool or equipment</li>
+                            <li>Board game/card game</li>
+                            <li>Clothing line</li>
+                            <li>Food product</li>
                         </ul>
                     </div>
                 </details>
@@ -534,57 +405,56 @@
                     <summary>🔬 <b>Research & Analysis</b></summary>
                     <div class="content-body">
                         <ul>
-                            <li>Archaeological report</li>
-                            <li>Comparative analysis</li>
-                            <li>Cost-benefit analysis</li>
                             <li>Demographic analysis</li>
                             <li>Environmental audit</li>
-                            <li>Ethnographic study</li>
-                            <li>Experimental results</li>
                             <li>Historical archive</li>
-                            <li>Impact assessment</li>
-                            <li>Literature review</li>
+                            <li>Scientific discovery</li>
+                            <li>Experimental results</li>
                             <li>Longitudinal study</li>
                             <li>Market research report</li>
-                            <li>Scientific discovery</li>
-                            <li>Sports analytics report</li>
-                            <li>Statistical analysis</li>
                             <li>SWOT analysis</li>
+                            <li>Cost-benefit analysis</li>
+                            <li>Impact assessment</li>
+                            <li>Literature review</li>
+                            <li>Statistical analysis</li>
+                            <li>Ethnographic study</li>
+                            <li>Archaeological report</li>
+                            <li>Comparative analysis</li>
                         </ul>
                     </div>
                 </details>
 
                 <details>
-                    <summary>🏛️ <b>Exhibitions & Displays</b></summary>
+                    <summary>🖼️ <b>Exhibitions & Displays</b></summary>
                     <div class="content-body">
                         <ul>
-                            <li>Documentary film</li>
                             <li>Exhibition</li>
-                            <li>Gallery installation</li>
-                            <li>Living history display</li>
-                            <li>Memorial or monument design</li>
                             <li>Museum exhibit</li>
-                            <li>Pop-up exhibition</li>
+                            <li>Documentary film</li>
+                            <li>Gallery installation</li>
                             <li>Science fair display</li>
                             <li>Trade show booth</li>
+                            <li>Pop-up exhibition</li>
+                            <li>Living history display</li>
                             <li>Traveling exhibition</li>
                             <li>Virtual museum</li>
+                            <li>Memorial or monument design</li>
                         </ul>
                     </div>
                 </details>
 
                 <details>
-                    <summary>⚽ <b>Recreation & Sports</b></summary>
+                    <summary>🏀 <b>Recreation & Sports</b></summary>
                     <div class="content-body">
                         <ul>
-                            <li>Athletic training guide</li>
-                            <li>Coaching curriculum</li>
-                            <li>Fitness program design</li>
-                            <li>Outdoor adventure course</li>
-                            <li>Recreation facility plan</li>
                             <li>Rules for a new sport</li>
-                            <li>Sports analytics report</li>
                             <li>Sports tournament organization</li>
+                            <li>Fitness program design</li>
+                            <li>Recreation facility plan</li>
+                            <li>Coaching curriculum</li>
+                            <li>Athletic training guide</li>
+                            <li>Sports analytics report</li>
+                            <li>Outdoor adventure course</li>
                             <li>Wellness program</li>
                         </ul>
                     </div>
@@ -594,9 +464,43 @@
                     <summary>🏗️ <b>Structural & Environmental Design</b></summary>
                     <div class="content-body">
                         <ul>
-                            <li>Architectural model</li>
-                            <li>Blueprint</li>
-                            <li>City plan</li>
                             <li>Classroom redesign</li>
+                            <li>School garden</li>
+                            <li>City plan</li>
+                            <li>Blueprint</li>
+                            <li>Architectural model</li>
+                            <li>Landscape design</li>
+                            <li>Sustainable building design</li>
+                            <li>Public space redesign</li>
+                            <li>Urban planning proposal</li>
                             <li>Green infrastructure plan</li>
+                            <li>Park or playground design</li>
                             <li>Interior design portfolio</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>📚 <b>Educational & Training Materials</b></summary>
+                    <div class="content-body">
+                        <ul>
+                            <li>Curriculum design</li>
+                            <li>Lesson plan series</li>
+                            <li>Educational board game</li>
+                            <li>Training program</li>
+                            <li>Teaching toolkit</li>
+                            <li>Assessment instrument</li>
+                            <li>Educational video series</li>
+                            <li>Student handbook</li>
+                            <li>Parent resource guide</li>
+                            <li>Professional development workshop</li>
+                        </ul>
+                    </div>
+                </details>
+            </div>
+        </details>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
